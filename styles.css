@@ -447,7 +447,7 @@ div#workexp {
 div#workexp div {
   width: 100%;
 }
-div#workexp div div#workexp-content {
+div#workexp div#workexp-content {
   width: 100%;
   display: grid;
   grid-template-columns: 7% 86% 7%;
@@ -554,7 +554,7 @@ p {
 }
 
 .highlight-1 {
-  background-color: var(--accent-color-1);
+  background-color: var(--accent-color-6);
 }
 .highlight-2 {
   background-color: var(--accent-color-2);
@@ -715,7 +715,7 @@ div#main-container div#page-container.pos8 {
   }
 }
 div#main-container div#page-container div#interest.page .scroller {
-  max-width: 600px;
+  max-width: 750px;
 }
 
 div#main-container div#page-container div#interest.page .scroller__inner {
