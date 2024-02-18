@@ -1,12 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 
 :root {
-  --accent-color: rgb(75, 107, 33);
-  --accent-color-2: #d4722d;
+  --accent-color-6: rgb(75, 107, 33);
+  --accent-color-1: #d4722d;
   --accent-color-3: #187720;
   --accent-color-4: #7aad44;
-  --accent-color-5: #707425;
-  --accent-color-5: #d54c27;
+  --accent-color-5: #e8d94f;
+  --accent-color-2: #d54c27;
 
   --currblock: 1;
   --light-back: rgb(247, 242, 216);
@@ -72,9 +72,10 @@ h4 {
   font-size: 20px;
 }
 h5 {
-  font-size: 30px;
+  font-size: 20px;
   margin: 0px;
   padding: 0px;
+  font-weight: 200;
 }
 
 hr {
@@ -82,11 +83,22 @@ hr {
 }
 
 a {
-  color: var(--accent-color);
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-color-1);
+  text-decoration: underline solid 1px;
 }
 
 p.two-columns {
   columns: 2;
+}
+
+ul {
+  list-style: none;
+  text-indent: none;
+  padding-left: 0;
 }
 
 div#site-container {
@@ -128,7 +140,7 @@ div#sidebar nav ul li.active {
   color: var(--accent-color-2);
 }
 div#sidebar nav ul li:hover {
-  color: var(--accent-color);
+  color: var(--accent-color-1);
   cursor: pointer;
 }
 div#sidebar button {
@@ -190,6 +202,7 @@ div#main-container div#page-container div.page {
 }
 div#main-container div#page-container div.page p {
   text-align: justify;
+  width: 100%;
 }
 
 /*control visible*/
@@ -215,6 +228,7 @@ div#main-container
   div.info-container
   div {
   padding-right: 20px;
+  line-height: 25px;
 }
 
 div#main-container
@@ -222,8 +236,129 @@ div#main-container
   div#education.page
   div.info-container
   div
-  h4 {
-  background-color: var(--accent-color-3);
+  span {
+  font-size: 20px;
+}
+
+/*WORK EXPEIENECE*/
+div#main-container div#page-container div#workexp.page div span {
+  font-size: 20px;
+}
+
+/*SKILLS*/
+div#main-container div#page-container div#skills.page h5 {
+  padding: 0;
+  margin: 0;
+}
+div#main-container div#page-container div#skills.page ul.skills-ratings {
+  width: 500px;
+}
+div#main-container div#page-container div#skills.page ul {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+}
+div#main-container div#page-container div#skills.page ul.skills-ratings li {
+  height: 25px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  justify-items: end;
+  align-items: end;
+  text-align: right;
+}
+
+div#main-container div#page-container div#skills.page ul.skills-ratings li p {
+  padding-right: 10px;
+  text-align: right;
+}
+div#main-container div#page-container div#skills.page ul.skills-ratings li svg {
+  width: 100%;
+  height: 15px;
+  padding-left: 15px;
+}
+
+div#main-container div#page-container div#skills.page ul li {
+  list-style-type: disc;
+}
+div#main-container
+  div#page-container
+  div#skills.page
+  ul.skills-ratings
+  li
+  rect {
+  height: 10px;
+}
+div#main-container
+  div#page-container
+  div#skills.page
+  ul.skills-ratings
+  li
+  rect.scale {
+  width: 96%;
+  height: 10px;
+  fill: transparent;
+  stroke-width: 1;
+  stroke: rgb(0, 0, 0);
+}
+div#main-container div#page-container div#skills.page ul li rect.score-10 {
+  width: 10%;
+}
+div#main-container div#page-container div#skills.page ul li rect.score-20 {
+  width: 20%;
+}
+div#main-container div#page-container div#skills.page ul li rect.score-30 {
+  width: 30%;
+}
+div#main-container div#page-container div#skills.page ul li rect.score-40 {
+  width: 40%;
+}
+div#main-container div#page-container div#skills.page ul li rect.score-50 {
+  width: 50%;
+}
+div#main-container div#page-container div#skills.page ul li rect.score-60 {
+  width: 60%;
+}
+div#main-container div#page-container div#skills.page ul li rect.score-70 {
+  width: 70%;
+}
+div#main-container div#page-container div#skills.page ul li rect.score-80 {
+  width: 80%;
+}
+div#main-container div#page-container div#skills.page ul li rect.score-90 {
+  width: 90%;
+}
+
+div#main-container div#page-container div#interest.page div.card-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+}
+div#main-container
+  div#page-container
+  div#interest.page
+  div.card-container
+  div.card {
+  padding: 10px;
+}
+div#main-container
+  div#page-container
+  div#interest.page
+  div.card-container
+  div.card:nth-child(2) {
+  grid-row: 1/3;
+  grid-column: 2/3;
+  justify-self: center;
+}
+div#main-container
+  div#page-container
+  div#interest.page
+  div.card-container
+  div.card
+  img {
+  float: left;
+  width: 80px;
+  height: min-content;
+  padding-right: 7px;
 }
 
 /*SOCIALS*/
@@ -304,7 +439,44 @@ video {
   padding: 0;
   margin: 0;
 }
+/*work exp*/
+div#workexp {
+  width: 100%;
+  height: auto;
+}
+div#workexp div {
+  width: 100%;
+}
+div#workexp div div#workexp-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 7% 86% 7%;
+}
+div#workexp div#workexp-content span.material-symbols-outlined {
+  align-self: center;
+  padding: 10px 0px;
+  height: 300px;
+}
 
+div#workexp div#workexp-content span.material-symbols-outlined:hover {
+  color: black;
+}
+div#workexp div#workexp-content div#workexp-cards {
+  display: grid;
+  grid-template-columns: 100%;
+  overflow: hidden;
+}
+div#workexp div#workexp-content div#workexp-cards div.card {
+  display: none;
+  height: 300px;
+  width: 100%;
+}
+div#workexp div#workexp-content div#workexp-cards .card.active {
+  display: block;
+  width: 100%;
+}
+
+/*INterests*/
 div#interest img {
   width: 100px;
   height: auto;
@@ -312,7 +484,8 @@ div#interest img {
 
 /*HOME ANIMATION*/
 
-.text {
+div#main-container div#page-container div#home.page .text {
+  display: flex;
   font-size: 37px;
   width: 450px;
   left: 50%;
@@ -320,6 +493,10 @@ div#interest img {
   top: 50%;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+div#main-container div#page-container div#home.page .text p:nth-child(1) {
+  width: fit-content;
 }
 
 p {
@@ -377,9 +554,15 @@ p {
 }
 
 .highlight-1 {
-  background-color: var(--accent-color-2);
+  background-color: var(--accent-color-1);
 }
 .highlight-2 {
+  background-color: var(--accent-color-2);
+}
+.highlight-3 {
+  background-color: var(--accent-color-3);
+}
+.highlight-4 {
   background-color: var(--accent-color-4);
 }
 .highlight-5 {
@@ -530,4 +713,137 @@ div#main-container div#page-container.pos8 {
     top: -700%;
     background-color: blueviolet;
   }
+}
+div#main-container div#page-container div#interest.page .scroller {
+  max-width: 600px;
+}
+
+div#main-container div#page-container div#interest.page .scroller__inner {
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  text-transform: uppercase;
+}
+
+div#main-container
+  div#page-container
+  div#interest.page
+  .scroller[data-animated="true"] {
+  overflow: hidden;
+}
+
+div#main-container
+  div#page-container
+  div#interest.page
+  .scroller[data-animated="true"]
+  .scroller__inner {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  flex-wrap: nowrap;
+  -webkit-animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+div#main-container
+  div#page-container
+  div#interest.page
+  .scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+div#main-container
+  div#page-container
+  div#interest.page.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+div#main-container
+  div#page-container
+  div#interest.page
+  .scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+div#main-container
+  div#page-container
+  div#interest.page
+  .scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@-webkit-keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+/*
+body {
+  display: grid;
+  min-block-size: 100vh;
+  place-content: center;
+  font-family: system-ui;
+  font-size: 1.125rem;
+  background-color: var(--clr-primary-800);
+}*/
+
+div#main-container div#page-container div#interest.page .tag-list {
+  margin: 0 auto;
+  padding-inline: 0;
+  list-style: none;
+}
+
+div#main-container div#page-container div#interest.page .tag-list li {
+  padding: 1rem;
+  background-color: white;
+}
+div#main-container
+  div#page-container
+  div#interest.page
+  .tag-list
+  li:nth-child(5n + 1) {
+  color: var(--accent-color-2);
+}
+div#main-container
+  div#page-container
+  div#interest.page
+  .tag-list
+  li:nth-child(5n + 2) {
+  color: var(--accent-color-3);
+}
+div#main-container
+  div#page-container
+  div#interest.page
+  .tag-list
+  li:nth-child(5n + 3) {
+  color: var(--accent-color-4);
+}
+div#main-container
+  div#page-container
+  div#interest.page
+  .tag-list
+  li:nth-child(5n + 4) {
+  color: var(--accent-color-5);
+}
+div#main-container
+  div#page-container
+  div#interest.page
+  .tag-list
+  li:nth-child(5n) {
+  color: var(--accent-color-1);
+}
+
+/* for testing purposed to ensure the animation lined up correctly */
+div#main-container div#page-container div#interest.page .test {
+  background: red !important;
 }

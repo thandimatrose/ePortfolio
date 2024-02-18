@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="" />
+    <link rel="icon" type="image/png" href="public/icons/Avatar Round.png" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      href="https://codepen.io/kevinpowell/pen/BavZQjN/9451cb2bddcecda34df2a0f718703cbc.css" />
     <script src="scripts.js"></script>
   </head>
   <body>
@@ -24,19 +24,22 @@
       <div id="sidebar">
         <header>
           <section>
-            <h1>Thandi <br />Matrose</h1>
+            <h1 onclick="changeContent('home')">Thandi <br />Matrose</h1>
             <em>developer / writer / eternal learner</em> <br /><br />
-            <a href="phone:+27824968904">+27 82 496 8904</a>
+
             <p>
               <span>
                 <a href="mailto:thandi.matrose016@gmail.com"
-                  >thandi.matrose016@gmail.com
-                </a>
+                  >thandi.matrose016@gmail.com </a
+                ><br />
               </span>
               <span>Mowbray, Cape Town</span>
             </p>
           </section>
-          <img src="public/images/thandi.jpg" alt="Image of Thandi Matrose" />
+          <img
+            src="public/images/thandi.jpg"
+            alt="Image of Thandi Matrose"
+            onclick="changeContent('home')" />
         </header>
 
         <nav id="navigation-bar">
@@ -94,8 +97,8 @@
               <div class="info-container">
                 <div>
                   <div class="text">
-                    <p>I am</p>
                     <p>
+                      I am&#160;
                       <span class="word wisteria">attentive.</span>
                       <span class="word belize">intelligent.</span>
                       <span class="word pomegranate">curious.</span>
@@ -144,18 +147,10 @@
               <h3>My Education</h3>
               <div class="info-container">
                 <div>
-                  <span
-                    style="
-                      margin: 0px;
-                      padding: 0px;
-                      font-size: 20px;
-                      background-color: var(--accent-color-4);
-                    "
-                    >University of Cape Town</span
-                  ><br />
+                  <span class="highlight-4">University of Cape Town</span><br />
 
-                  BSc(Hons) Geoinformatics & Computer Science <br />Jan 2022 -
-                  Feb 2026<br />
+                  <strong>BSc(Hons) Geoinformatics & Computer Science</strong>
+                  <br /><em>Jan 2022 - Feb 2026</em><br />
                   Accumulated Weighted GPA of 73.09%<br /><br />
                   <p>
                     In my studies, I achieve high results that have earned my
@@ -169,12 +164,13 @@
                   </p>
                 </div>
                 <div>
-                  <span class="highlight-5">Elkanah House High School</span
+                  <span class="highlight-2">Elkanah House High School</span
                   ><br />
-                  Matric NSC Certificate (IEB Curriculum)<br />
+                  <strong> Matric NSC Certificate (IEB Curriculum)</strong
+                  ><br />
 
-                  2017 - 2021 <br />Average of 85.42% <br />7 Subject A's /w
-                  Information Technology 88% <br />
+                  <em>2017 - 2021 </em><br />Average of 85.42% (7 Subject A's /w
+                  Information Technology 88%) <br />
                 </div>
               </div>
             </div>
@@ -183,61 +179,187 @@
           <div id="workexp" class="page not-visible">
             <div>
               <h3>Work Experience</h3>
+              <div id="workexp-content">
+                <span
+                  class="material-symbols-outlined"
+                  onclick="moveWorkExp(false)">
+                  arrow_back_ios_new
+                </span>
+                <div id="workexp-cards">
+                  <div class="card active">
+                    <span class="highlight-2"
+                      >Geographic Information Systems Intern</span
+                    ><br />
+                    <em>Information & Knowledge Management Department</em><br />
+                    @ City of Cape Town, Wale Street Office <br /><br />
+                    <p style="text-align: justify">
+                      Completed a 10-day internship in the Information and
+                      Knowledge Management Department. Learnt about the many
+                      datasets maintained by the department for delivery to,
+                      among other places, their product, the CityMap Viewer.
+                      Worked with various data sources such as Aerial Imagery,
+                      LiDAR and Oblique Imagery. Gained exposure to processing
+                      Big Data on the scale of the entire city with the city's
+                      wealth of computer resources. One of the processes was
+                      extracting building footprints using Deep Learning in the
+                      ArcGIS Pro environment.
+                    </p>
+                    Ref: Thomas Reiner*
+                  </div>
+                  <div class="card">
+                    <span class="highlight-4">High School Debating Coach </span
+                    ><br /><em>Elkanah House High School</em><br />[Jan 2022 -
+                    present] <br />Teaching Senior and Junior Debate Teams in
+                    preparation for competitive leagues.<br />
+                    Ref: Catherine van der Nest* <br />
+                  </div>
+                  <div class="card">
+                    <span class="highlight-5">Private High School Tutor</span
+                    ><br />
+                    Mathematics, Physics & Chemistry <br />
+                  </div>
+                </div>
 
-              <span class="highlight-1"
-                >Geographic Information Systems Intern</span
-              ><br />
-              <em>Information & Knowledge Management Department</em><br />
-              @ City of Cape Town, Wale Street Office <br /><br />
-              <p style="text-align: justify">
-                Completed a 10-day internship in the Information and Knowledge
-                Management Department. Learnt about the many datasets maintained
-                by the department for delivery to, among other places, their
-                product, the CityMap Viewer. Worked with various data sources
-                such as Aerial Imagery, LiDAR and Oblique Imagery. Gained
-                exposure to processing Big Data on the scale of the entire city
-                with the city's wealth of computer resources. One of the
-                processes was extracting building footprints using Deep Learning
-                in the ArcGIS Pro environment.
-              </p>
-              Ref: Thomas Reiner*
-              <hr />
-              <span class="highlight-2">High School Debating Coach </span
-              ><br /><em>Elkanah House High School</em><br />[Jan 2022 -
-              present] <br />Teaching Senior and Junior Debate Teams in
-              preparation for competitive leagues.<br />
-              Ref: Catherine van der Nest* <br />
-              <hr />
-              <span class="highlight-2">Private High School Tutor</span><br />
-              Mathematics, Physics & Chemistry <br />
-              <hr />
+                <span
+                  class="material-symbols-outlined"
+                  onclick="moveWorkExp(true)"
+                  style="justify-self: end">
+                  arrow_forward_ios
+                </span>
+              </div>
               *Contact details upon request
             </div>
           </div>
           <div id="skills" class="page pos4 not-visible">
             <div>
               <h3>My Skills</h3>
-              <ul>
-                <li>Python</li>
-                <li>Java</li>
-                <li>JavaScript</li>
-                <li>Typescript</li>
-                <li>React.js</li>
-                <li>HTML + CSS</li>
-                <li>Sass</li>
-                <li>SQL</li>
+              <h5><span class="highlight-5">Competencies</span></h5>
+              <ul class="skills-ratings">
+                <li>
+                  <p>Python</p>
+                  <svg xmlns="http://www.w3.org/2000/svg">
+                    <rect
+                      class="score-80"
+                      x="0"
+                      y="0"
+                      rx="5"
+                      ry="5"
+                      fill="var(--accent-color-2)" />
+                    <rect class="scale" x="0" y="0" rx="5" ry="5" />
+                  </svg>
+                </li>
+                <li>
+                  <p>Java</p>
+                  <svg xmlns="http://www.w3.org/2000/svg">
+                    <rect
+                      class="score-90"
+                      x="0"
+                      y="0"
+                      rx="5"
+                      ry="5"
+                      fill="var(--accent-color-3)" />
+                    <rect class="scale" x="0" y="0" rx="5" ry="5" />
+                  </svg>
+                </li>
+                <li>
+                  <p>JavaScript</p>
+                  <svg xmlns="http://www.w3.org/2000/svg">
+                    <rect
+                      class="score-80"
+                      x="0"
+                      y="0"
+                      rx="5"
+                      ry="5"
+                      fill="var(--accent-color-6)" />
+                    <rect class="scale" x="0" y="0" rx="5" ry="5" />
+                  </svg>
+                </li>
+                <li>
+                  <p>Typescript</p>
+                  <svg xmlns="http://www.w3.org/2000/svg">
+                    <rect
+                      class="score-60"
+                      x="0"
+                      y="0"
+                      rx="5"
+                      ry="5"
+                      fill="var(--accent-color-4)" />
+                    <rect class="scale" x="0" y="0" rx="5" ry="5" />
+                  </svg>
+                </li>
+                <li>
+                  <p>React.js</p>
+                  <svg xmlns="http://www.w3.org/2000/svg">
+                    <rect
+                      class="score-40"
+                      x="0"
+                      y="0"
+                      rx="5"
+                      ry="5"
+                      fill="var(--accent-color-3)" />
+                    <rect class="scale" x="0" y="0" rx="5" ry="5" />
+                  </svg>
+                </li>
+
+                <li>
+                  <p>HTML + CSS</p>
+                  <svg xmlns="http://www.w3.org/2000/svg">
+                    <rect
+                      class="score-90"
+                      x="0"
+                      y="0"
+                      rx="5"
+                      ry="5"
+                      fill="var(--accent-color-2)" />
+                    <rect class="scale" x="0" y="0" rx="5" ry="5" />
+                  </svg>
+                </li>
+                <li>
+                  <p>Sass</p>
+                  <svg xmlns="http://www.w3.org/2000/svg">
+                    <rect
+                      class="score-20"
+                      rx="5"
+                      ry="5"
+                      fill="var(--accent-color-6)" />
+                    <rect class="scale" x="0" y="0" rx="5" ry="5" />
+                  </svg>
+                </li>
+                <li>
+                  <p>SQL</p>
+                  <svg xmlns="http://www.w3.org/2000/svg">
+                    <rect
+                      class="score-60"
+                      x="0"
+                      y="0"
+                      rx="5"
+                      ry="5"
+                      fill="var(--accent-color-2)" />
+                    <rect class="scale" x="0" y="0" rx="5" ry="5" />
+                  </svg>
+                </li>
               </ul>
-              <h5>Technical Applications</h5>
-              Relational Database Design and Implementation using SQL with
-              Microsoft Access and DBeaver (2yrs)<br />
-              OOP using Java (3yrs)<br />
-              Front-end Web Design using HTML, CSS and JavaScript (3yrs)<br />
-              Functional Programming using Python (2yrs)<br />Software
-              Development with JavaGUI (1yr) <br />ArcGIS Pro Data Analysis &
-              Reporting (1yr) Communication • Sophisticated and Professionally
-              Trained Public Speaking (Senior Debater of the Year 2020 & 2021
-              and Toastmasters Course) Languages English Advanced Afrikaans
-              Intermediate
+              <h5><span class="highlight-3">Technical Applications</span></h5>
+              <ul>
+                <li>
+                  Front-end Web Design using HTML, CSS and JavaScript (3yrs)
+                </li>
+                <li>
+                  Relational Database Design and Implementation using SQL with
+                  Microsoft Access and DBeaver (2yrs)>
+                </li>
+                <li>OOP using Java (3yrs)</li>
+
+                <li>Functional Programming using Python (2yrs)</li>
+                <li>Software Development with JavaGUI (1yr)</li>
+                <li>ArcGIS Pro Data Analysis & Reporting (1yr)</li>
+              </ul>
+              <h5><span class="highlight-4">Communication</span></h5>
+              <ul>
+                Sophisticated and Professionally Trained Public Speaking (Senior
+                Debater of the Year 2020 & 2021 and Toastmasters Course)
+                Languages English Advanced Afrikaans Intermediate
+              </ul>
             </div>
           </div>
           <div id="projects" class="page pos5 not-visible">
@@ -302,10 +424,82 @@
           <div id="interest" class="page pos7 not-visible">
             <div>
               <h3>My Interests</h3>
-              <img
-                src="public/icons/tennis.png"
-                alt="Tennis Icon"
-                class="icon" />Tennis Hiking
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Aperiam nisi velit eaque adipisci omnis, natus aut in quod
+                voluptas? Ducimus.
+              </p>
+              <div id="scroller-container">
+                <div class="scroller" data-speed="fast">
+                  <ul class="tag-list scroller__inner">
+                    <li>Computer Vision</li>
+                    <li>Virtual Reality</li>
+                    <li>Blogging</li>
+                    <li>Tennis</li>
+                    <li>Hiking</li>
+                  </ul>
+                </div>
+
+                <div class="scroller" data-direction="right" data-speed="slow">
+                  <ul class="tag-list scroller__inner">
+                    <li>Plant-based Eating</li>
+                    <li>Reading Non-Fiction</li>
+                    <li>JS</li>
+                    <li>SSG</li>
+                    <li>webdev</li>
+                    <li>animation</li>
+                    <li>UI/UX</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card-container">
+                <div class="card">
+                  <p>
+                    <img
+                      src="public/icons/tennis.png"
+                      alt="Tennis Icon"
+                      class="icon" />
+                    <span class="highlight-3">Writing</span>&#160;Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Magnam, esse
+                    aspernatur. Atque quis dignissimos omnis quas repellendus
+                    rerum itaque beatae quos corporis. Iure eos exercitationem
+                    quidem odio suscipit aliquid impedit voluptates porro
+                    consectetur.
+                  </p>
+                </div>
+
+                <div class="card">
+                  <p>
+                    <img
+                      src="public/icons/tennis.png"
+                      alt="Tennis Icon"
+                      class="icon" />
+                    <span class="highlight-4">Writing</span>&#160;Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Magnam, esse
+                    aspernatur. Atque quis dignissimos omnis quas repellendus
+                    rerum itaque beatae quos corporis. Iure eos exercitationem
+                    quidem odio suscipit aliquid impedit voluptates porro
+                    consectetur, harum mollitia vero ipsam, obcaecati culpa.
+                    Possimus veritatis corrupti assumenda id minus, libero
+                    dignissimos et recusandae esse, delectus in praesentium
+                    dolorem unde! Assumenda laboriosam alias doloremque quia, ad
+                    similique asperiores soluta nostrum saepe, ab rem corporis
+                    blanditiis fugiat?
+                  </p>
+                </div>
+                <div class="card">
+                  <p>
+                    <img
+                      src="public/icons/tennis.png"
+                      alt="Tennis Icon"
+                      class="icon" />
+                    <span class="highlight-5">Writing</span>&#160;Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Magnam, esse
+                    aspernatur. Atque quis dignissimos omnis quas repellendus
+                    rerum itaque beatae quos corporis.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -370,6 +564,33 @@
     }
 
     changeWord();
-    setInterval(changeWord, 5000);
+    setInterval(changeWord, 3000);
+
+    const scrollers = document.querySelectorAll(".scroller");
+
+    // If a user hasn't opted in for recuded motion, then we add the animation
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      addAnimation();
+    }
+
+    function addAnimation() {
+      scrollers.forEach((scroller) => {
+        // add data-animated="true" to every `.scroller` on the page
+        scroller.setAttribute("data-animated", true);
+
+        // Make an array from the elements within `.scroller-inner`
+        const scrollerInner = scroller.querySelector(".scroller__inner");
+        const scrollerContent = Array.from(scrollerInner.children);
+
+        // For each item in the array, clone it
+        // add aria-hidden to it
+        // add it into the `.scroller-inner`
+        scrollerContent.forEach((item) => {
+          const duplicatedItem = item.cloneNode(true);
+          duplicatedItem.setAttribute("aria-hidden", true);
+          scrollerInner.appendChild(duplicatedItem);
+        });
+      });
+    }
   </script>
 </html>

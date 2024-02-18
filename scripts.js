@@ -32,4 +32,24 @@ function changeContent(name) {
   }
 }
 
+function moveWorkExp(isForward) {
+  const myElement = document.getElementById("workexp-cards");
+  const childArr = myElement.children;
+  for (let i = 0; i < childArr.length; i++) {
+    if (childArr[i].classList.contains("active")) {
+      if (isForward) {
+        childArr[(i + 1) % childArr.length].classList.add("active");
+        childArr[i].classList.remove("active");
+        break;
+      } else {
+        childArr[(i + childArr.length - 1) % childArr.length].classList.add(
+          "active"
+        );
+        childArr[i].classList.remove("active");
+        break;
+      }
+    }
+  }
+}
+
 /*Home Animation*/
