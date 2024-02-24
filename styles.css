@@ -1,17 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 
 :root {
-  --accent-color-6: rgb(75, 107, 33);
+  --accent-color-6: rgb(88, 138, 161);
   --accent-color-1: #d4722d;
-  --accent-color-3: #187720;
-  --accent-color-4: #7aad44;
+  --accent-color-3: #4354a3;
+  --accent-color-4: #aee4ec;
   --accent-color-5: #e8d94f;
   --accent-color-2: #d54c27;
 
   --currblock: 1;
   --light-back: rgb(247, 242, 216);
   --heading-font: "Theano Didot", serif;
-  --body-font2: "Cormorant Garamond", sans-serif;
+  --body-font2: "Cormorant Garamond",serif;
   --body-font: "Swis721 Lt BT", sans-serif;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -19,7 +19,9 @@
     scroll-behavior: auto;
   }
 }
-
+.gray {
+  color: grey;
+}
 html {
   height: 100%;
 
@@ -38,7 +40,7 @@ body {
   height: 100%;
   font-family: var(--body-font);
   font-weight: 100;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 img {
@@ -101,6 +103,14 @@ ul {
   padding-left: 0;
 }
 
+div#main-container div#credits{
+  position: absolute;
+  bottom: 20px;
+  font-size: 12px;
+  left: 50px;
+  width: 340px;
+  font-style: italic;
+}
 div#site-container {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -110,21 +120,29 @@ div#site-container {
 }
 div#sidebar {
   height: max-content;
+  margin-left: 8%;
   padding: 10px;
   text-align: right;
+  background-image: url(/public/images/background1.jpg);
+background-size: cover;
 }
+
 div#sidebar header {
   display: grid;
   grid-template-columns: 60% 40%;
   padding: 10px;
-  padding-right: 0px;
+  padding-right: 10px;
+  padding-left: 30px;
   justify-items: end;
   align-items: center;
 }
 div#sidebar header section {
   height: max-content;
-
   padding-right: 10px;
+}
+
+div#sidebar header img {
+  
 }
 
 div#sidebar nav {
@@ -135,13 +153,15 @@ div#sidebar nav ul {
   list-style: none;
   font-size: large;
 }
-
+div#sidebar nav ul li a {
+  background-color: white;
+}
 div#sidebar nav ul li.active {
   color: var(--accent-color-2);
 }
 div#sidebar nav ul li:hover {
   color: var(--accent-color-1);
-  cursor: pointer;
+ 
 }
 div#sidebar button {
   color: black;
@@ -196,9 +216,9 @@ div#main-container div#page-container div.page {
   align-items: center; /* Centers child vertically */
   height: 100vh;
   width: 80%;
-  background-color: var(--light-back);
   padding-left: 25px;
   padding-right: 25px;
+  
 }
 div#main-container div#page-container div.page p {
   text-align: justify;
@@ -221,6 +241,12 @@ div#main-container div#page-container div.page.not-visible {
 div#main-container div#page-container div#education.page div.info-container {
   display: grid;
   grid-template-columns: 50% 50%;
+}
+div#main-container
+  div#page-container
+  div#education.page
+  div.info-container
+  img {
 }
 div#main-container
   div#page-container
@@ -553,6 +579,10 @@ p {
   color: #d54c27;
 }
 
+.highlight-0 {
+  background-color: white;
+}
+
 .highlight-1 {
   background-color: var(--accent-color-6);
 }
@@ -603,6 +633,19 @@ div#main-container div#page-container.pos7 {
 }
 div#main-container div#page-container.pos8 {
   top: -700%;
+}
+
+div#main-container div#page-container div#projects.page {
+}
+div#main-container div#page-container div#projects div.card-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  overflow: hidden;
+}
+div#main-container div#page-container div#projects div.card-container .card {
+  width: fit-content;
+  margin-right: 20px;
 }
 
 /**/

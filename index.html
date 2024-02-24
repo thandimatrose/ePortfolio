@@ -44,24 +44,24 @@
 
         <nav id="navigation-bar">
           <ul>
-            <li id="nav-home" class="active" onclick="changeContent('home')">
-              Home
+            <li id="nav-home" class="active">
+              <a onclick="changeContent('home')">Home</a>
             </li>
-            <li id="nav-education" onclick="changeContent('education')">
-              My Education
+            <li id="nav-education" >
+              <a onclick="changeContent('education')">My Education</a>
             </li>
-            <li id="nav-workexp" onclick="changeContent('workexp')">
-              My Work Experience
+            <li id="nav-workexp">
+              <a onclick="changeContent('workexp')">My Work Experience</a>
             </li>
-            <li id="nav-skills" onclick="changeContent('skills')">My Skills</li>
-            <li id="nav-projects" onclick="changeContent('projects')">
-              My Projects
+            <li id="nav-skills" ><a onclick="changeContent('skills')">My Skills</a></li>
+            <li id="nav-projects">
+              <a onclick="changeContent('projects')">My Projects</a>
             </li>
-            <li id="nav-awards" onclick="changeContent('awards')">
-              My Awards & Certfications
+            <li id="nav-awards">
+              <a onclick="changeContent('awards')">My Leadership & Awards</a>
             </li>
-            <li id="nav-interest" onclick="changeContent('interest')">
-              My Interests
+            <li id="nav-interest" >
+             <a onclick="changeContent('interest')">My Interests</a>
             </li>
           </ul>
         </nav>
@@ -88,6 +88,7 @@
             ><button>Download my CV</button></a
           >
         </address>
+        
       </div>
 
       <div id="main-container">
@@ -147,6 +148,16 @@
               <h3>My Education</h3>
               <div class="info-container">
                 <div>
+                  <img
+                    src="public/logos/uct_logo.svg"
+                    style="
+                      float: left;
+                      width: 75px;
+                      padding: 15px;
+                      padding-bottom: 25px;
+                      background-color: transparent;
+                    "
+                    alt="University of Cape Town's Logo" />
                   <span class="highlight-4">University of Cape Town</span><br />
 
                   <strong>BSc(Hons) Geoinformatics & Computer Science</strong>
@@ -157,20 +168,42 @@
                     inclusion on the Dean's Merit List 2023 for the Faculty of
                     Engineering and the Built Environment. Notably, I excel in
                     Computer Science courses, obtaining 75% and 78% in Computer
-                    Science 1A and 1B, respectively. I am honoured to share that
-                    I have been invited to join the prestigious Golden Key
-                    International Honour Society, recognising my outstanding
-                    academic achievements and commitment to scholarship.
+                    Science 1A and 1B, respectively. <br />
+                    <strong>- Coursework</strong>: Java OOP, Data Structures, SQL, Unix <em class="gray"><a onclick="changeContent('skills')">see more</a></em><br/>
+                   <strong>- Achievements</strong>: Dean's List 2023 <em class="gray"><a onclick="changeContent('awards')">see more</a></em>
+                  
                   </p>
                 </div>
                 <div>
-                  <span class="highlight-2">Elkanah House High School</span
-                  ><br />
+                  <img
+                    src="public/logos/elkanah_logo.webp"
+                    alt="Elkanah House
+                  High School Logo"
+                    style="
+                      width: 200px;
+                      display: block;
+                      margin-left: auto;
+                      margin-right: auto;
+                    " />
+                  <h4 style="text-align: center; padding: 0">
+                    <span class="highlight-2">Elkanah House High School</span>
+                  </h4>
+                  <br />
                   <strong> Matric NSC Certificate (IEB Curriculum)</strong
                   ><br />
 
                   <em>2017 - 2021 </em><br />Average of 85.42% (7 Subject A's /w
                   Information Technology 88%) <br />
+                  <p>
+                    Head Prefect Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Similique mollitia perferendis debitis
+                    explicabo alias, suscipit laudantium optio? Minus incidunt
+                    quisquam architecto cupiditate quas quae non nisi
+                    praesentium, voluptatum similique accusamus!
+                  </p>
+                  <strong>- Electives</strong>: Physical Sciences, Information Technology,
+                  Geography, Advanced Programme Maths, Advanced Programme
+                  English
                 </div>
               </div>
             </div>
@@ -217,6 +250,7 @@
                     <span class="highlight-5">Private High School Tutor</span
                     ><br />
                     Mathematics, Physics & Chemistry <br />
+                    Improvement to A's. My student focussed approach is
                   </div>
                 </div>
 
@@ -364,60 +398,141 @@
           </div>
           <div id="projects" class="page pos5 not-visible">
             <div>
-              <h3>Projects</h3>
-              <video>
-                <source
-                  src="public/videos/afri-fem-soc.mp4"
-                  type="video/mp4"
-                  controls />
-                <!--CHECK JS FOR ONLY AUTOPLAY O  VISIBLE-->
-                <source src="movie.ogg" type="video/ogg" autoplay controls />
-                Your browser does not support the video tag.
-              </video>
-              <span
-                style="
-                  margin: 0px;
-                  padding: 0px;
-                  font-size: 20px;
-                  background-color: var(--accent-color-4);
-                "
-                >African Feminist Society Archive</span
-              >
-              (personal)<br />
-              In Progress<br />Languages: HTML, CSS, Typescript + React.js
-              <br />
-              <span
-                style="font-size: 20px; background-color: var(--accent-color-4)"
-                >Wavebreaker - COVID Strategist App</span
-              >
-              (academic)<br />
-              Completed Nov 2021<br />Languages: Java /w Maven<br />
-              <span
-                style="
-                  margin: 0px;
-                  padding: 0px;
-                  font-size: 20px;
-                  background-color: var(--accent-color-4);
-                "
-                >Vegilicious Newsletter Website</span
-              ><br />
-              Completed Feb 2021<br />Languages: HTML, CSS + SASS, Typescript +
-              React.js
+              <div>
+                <h3>Projects</h3>
+                <div class="card-container">
+                  <div class="card">
+                    <video>
+                      <source
+                        src="public/videos/afrifemsoc.mp4"
+                        type="video/mp4"
+                        controls />
+                      <source
+                        src="public/videos/afrifemsoc.mp4"
+                        type="video/ogg"
+                        autoplay
+                        controls />
+                      Your browser does not support the video tag.
+                    </video>
+                    <a
+                      href="https://afri-fem-soc.vercel.app/"
+                      style="
+                        margin: 0px;
+                        padding: 0px;
+                        font-size: 20px;
+                        background-color: var(--accent-color-5);
+                      "
+                      >African Feminist Society Archive</a
+                    >
+                    <br />(personal) <br />Tech: HTML, CSS, Typescript +
+                    React.js
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Ea rerum dolorem inventore illo aperiam, vitae, et
+                      quibusdam, libero eveniet debitis perferendis eius iste.
+                      Explicabo, cupiditate magnam earum necessitatibus deserunt
+                      provident.
+                    </p>
+                  </div>
+                  <div class="card">
+                    <a
+                      href="https://github.com/thandimatrose/Wavebreaker"
+                      style="
+                        font-size: 20px;
+                        background-color: var(--accent-color-3);
+                      "
+                      >Wavebreaker - COVID Strategist App</a
+                    >
+                    <br /><em>(academic) </em><br />Completed Nov 2021
+                    <br />Tech: Java /w Maven<br />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Cumque assumenda reprehenderit dolores unde distinctio
+                      autem commodi deserunt, quisquam voluptatum eveniet eius
+                      expedita velit vero ut necessitatibus doloremque nulla rem
+                      similique?
+                    </p>
+                  </div>
+                  <div class="card">
+                    <span
+                      style="
+                        margin: 0px;
+                        padding: 0px;
+                        font-size: 20px;
+                        background-color: var(--accent-color-4);
+                      "
+                      >Vegilicious Newsletter Website</span
+                    ><br />
+                    Completed Feb 2021<br />Languages: HTML, CSS + SASS,
+                    Typescript + React.js
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div id="awards" class="page pos6 not-visible">
             <div>
-              <strong>Second-Year Geomatics Class Representative 2023</strong>
-              <br />Mouthpiece for all Geoinformatics and Surveying students and
-              convenors' liaison for all relevant courses <br /><strong>
-                Coordinator 2023/2024 Vegilicious (Plant-Based Society @
-                UCT)</strong
-              ><br />
-              Elected to create resources and facilitate discussion space for
-              society members Co-Leader of Kangaroo Mom Knitting 2019-2020
-              Knitting blankets for mothers of premature babies at Karl Bremer
-              Hospital Head Prefect 2020/2021 Elected Head Prefect by high
-              school student body and staff
+              <h3>Leadership</h3>
+              <ul style="list-style: disc">
+                <li>
+                  <span class="highlight-5">Educational Coordinator</span> -
+                  <em>Vegilicious (Plant-Based Society @ UCT)</em><br />
+
+                  Responsible for planning Ted-style talks, workshops,
+                  presentations, lecturers all geared into sharing information
+                  about vegan advocacy, intersectionality, veganism in different
+                  context, nutrition through inviting different thought
+                  speakers.Running movie screenings which have an educative
+                  component about advocacy and collaborating with GCI/We are
+                  Animals and any likeminded societies. Encouraging writers,
+                  bloggers, poets, to contribute to knowledge sharing through
+                  writing for the UCT newspaper or broader networks
+                </li>
+                <li>
+                  <span class="highlight-0"
+                    >Second-Year Geomatics Class Representative 2023</span
+                  >
+                  - <em>UCT School of Architecture, Planning and Geomatics</em
+                  ><br />
+
+                  Mouthpiece for all Geoinformatics and Surveying students and
+                  convenors' liaison for all relevant courses <br />
+                  Coordinator 2023/2024
+                </li>
+                <li>
+                  <span class="highlight-5"
+                    >Kangaroo Mom's Knitting Coordinator</span
+                  >
+                  - <em>Vegilicious (Plant-Based Society @ UCT)</em><br />
+
+                  Elected to create resources and facilitate discussion space
+                  for society members Co-Leader of Kangaroo Mom Knitting
+                  2019-2020 Knitting blankets for mothers of premature babies at
+                  Karl Bremer Hospital Head Prefect 2020/2021 Elected Head
+                  Prefect by high school student body and staff
+                </li>
+              </ul>
+
+              <hr />
+              <h3>Awards</h3>
+              <ul style="list-style: disc">
+                <li>
+                  <span class="highlight-5">Deans Merit List 2023</span> -
+                  <em>UCT Faculty of Engineering and the Built Environment</em
+                  ><br />
+                  Awarded for achieving a Cumulative GPA of over 70% across 132
+                  credits or more for courses taken in 2023
+                </li>
+                <li>
+                  <span class="highlight-1">Personal Invitation</span> -
+                  <em>Golden Key Society</em><br />
+                  Awarded for achieving a Cumulative GPA of over 70% across 132
+                  credits or more for courses taken in 2023. I am honoured to share that
+                    I have been invited to join the prestigious Golden Key
+                    International Honour Society, recognising my outstanding
+                    academic achievements and commitment to scholarship
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -429,80 +544,40 @@
                 Aperiam nisi velit eaque adipisci omnis, natus aut in quod
                 voluptas? Ducimus.
               </p>
+
+              <h5 style="text-align: center; padding: 15px 0 0 0">
+                Research Interests
+              </h5>
+              <div class="scroller" data-direction="right" data-speed="slow">
+                <ul class="tag-list scroller__inner">
+                  <li>Computer Vision</li>
+                  <li>Virtual Reality</li>
+                  <li>JS</li>
+                  <li>Web Development</li>
+                  <li>UI/UX</li>
+                </ul>
+              </div>
+
+              <h5 style="text-align: center; padding: 15px 0 0 0">
+                Personal Interests
+              </h5>
               <div id="scroller-container">
                 <div class="scroller" data-speed="fast">
                   <ul class="tag-list scroller__inner">
-                    <li>Computer Vision</li>
-                    <li>Virtual Reality</li>
+                    <li>Reading Non-Fiction</li>
                     <li>Blogging</li>
+                    <li>Plant-based Eating</li>
                     <li>Tennis</li>
                     <li>Hiking</li>
                   </ul>
                 </div>
-
-                <div class="scroller" data-direction="right" data-speed="slow">
-                  <ul class="tag-list scroller__inner">
-                    <li>Plant-based Eating</li>
-                    <li>Reading Non-Fiction</li>
-                    <li>JS</li>
-                    <li>SSG</li>
-                    <li>webdev</li>
-                    <li>animation</li>
-                    <li>UI/UX</li>
-                  </ul>
-                </div>
               </div>
-              <div class="card-container">
-                <div class="card">
-                  <p>
-                    <img
-                      src="public/icons/tennis.png"
-                      alt="Tennis Icon"
-                      class="icon" />
-                    <span class="highlight-3">Writing</span>&#160;Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Magnam, esse
-                    aspernatur. Atque quis dignissimos omnis quas repellendus
-                    rerum itaque beatae quos corporis. Iure eos exercitationem
-                    quidem odio suscipit aliquid impedit voluptates porro
-                    consectetur.
-                  </p>
-                </div>
-
-                <div class="card">
-                  <p>
-                    <img
-                      src="public/icons/tennis.png"
-                      alt="Tennis Icon"
-                      class="icon" />
-                    <span class="highlight-4">Writing</span>&#160;Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Magnam, esse
-                    aspernatur. Atque quis dignissimos omnis quas repellendus
-                    rerum itaque beatae quos corporis. Iure eos exercitationem
-                    quidem odio suscipit aliquid impedit voluptates porro
-                    consectetur, harum mollitia vero ipsam, obcaecati culpa.
-                    Possimus veritatis corrupti assumenda id minus, libero
-                    dignissimos et recusandae esse, delectus in praesentium
-                    dolorem unde! Assumenda laboriosam alias doloremque quia, ad
-                    similique asperiores soluta nostrum saepe, ab rem corporis
-                    blanditiis fugiat?
-                  </p>
-                </div>
-                <div class="card">
-                  <p>
-                    <img
-                      src="public/icons/tennis.png"
-                      alt="Tennis Icon"
-                      class="icon" />
-                    <span class="highlight-5">Writing</span>&#160;Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Magnam, esse
-                    aspernatur. Atque quis dignissimos omnis quas repellendus
-                    rerum itaque beatae quos corporis.
-                  </p>
-                </div>
-              </div>
+              
             </div>
           </div>
+          
         </div>
+        <div id="credits">Image of Victoria & Alfred Waterfront, Cape Town, South Africa. <br/> Taken on film 35mm Expired Kodak Gold 200 by Amy Harrison</div>
       </div>
     </div>
   </body>
@@ -592,5 +667,11 @@
         });
       });
     }
+
+    if (window.chrome)
+    $("[type=video\\\/mp4]").each(function()
+    {
+        $(this).attr('src', $(this).attr('src').replace(".mp4", "_c.mp4"));
+    });
   </script>
 </html>
