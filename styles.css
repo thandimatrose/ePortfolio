@@ -123,8 +123,7 @@ div#sidebar {
   margin-left: 8%;
   padding: 10px;
   text-align: right;
-  background-image: url(/public/images/background1.jpg);
-background-size: cover;
+  
 }
 
 div#sidebar header {
@@ -215,7 +214,7 @@ div#main-container div#page-container div.page {
   display: flex; /* Make parent a flex-container */
   align-items: center; /* Centers child vertically */
   height: 100vh;
-  width: 80%;
+  width: 55cqw;
   padding-left: 25px;
   padding-right: 25px;
   
@@ -254,7 +253,6 @@ div#main-container
   div.info-container
   div {
   padding-right: 20px;
-  line-height: 25px;
 }
 
 div#main-container
@@ -889,4 +887,131 @@ div#main-container
 /* for testing purposed to ensure the animation lined up correctly */
 div#main-container div#page-container div#interest.page .test {
   background: red !important;
+}
+
+@media screen and (max-width: 1150px ){
+
+}
+@media screen and (max-width: 870px) {
+  body {
+
+  }
+  div#site-container {
+  grid-template-columns: 100%;
+  }
+
+  div#sidebar {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    
+    margin-left: 0px;
+  }
+  div#sidebar header {
+    
+    width: fit-content;
+    padding: 90px 10px;
+    padding-bottom: 10px;
+    grid-template-columns: auto auto
+
+  }
+
+  div#sidebar header img {
+    max-height: 30cqw;
+    justify-self: start;
+  }
+  div#sidebar nav {
+    display: none;
+   
+  }
+
+  div#sidebar address {
+    position: fixed;
+    bottom: 10px;
+    align-self: auto;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  div#sidebar address a {
+    justify-self: start;
+      
+  }
+  div#sidebar address  a button {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border: white 3px solid;
+  }
+
+  div#sidebar address  a:hover button {
+    background-color: white;
+    padding: 10px;
+    border: white 3px solid;
+    background-color: var(--accent-color-1);
+  }
+
+  div#main-container {
+    position: inherit;
+    top: 0%;
+  }
+
+  div#main-container div#page-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow: visible;
+  }
+   div#main-container div#page-container div.page {
+    height:max-content;
+    width: fit-content;
+    overflow: visible;
+    display: block;
+    padding-bottom: 30px;
+  }
+
+  div#main-container div#page-container div#home {
+    visibility: visible;
+  }
+  div#main-container div#page-container div#education {
+    visibility: visible;
+  }
+  div#main-container div#page-container div#education .gray{
+    display: none;
+  }
+  div#main-container div#page-container div#education.page div.info-container {
+      grid-template-columns: 100%;
+  }
+  div#main-container div#page-container div#skills {
+    visibility: visible;
+  }
+  div#main-container div#page-container div#projects {
+    visibility: visible;
+  }
+  div#main-container div#page-container div#workexp {
+    visibility: visible;
+  }
+  div#main-container div#page-container div#awards {
+    visibility: visible;
+  }
+
+  div#main-container div#page-container div#interest {
+    visibility: visible;
+    width: 90%;
+  }
+
+  p.two-columns {
+    columns: 1;
+  }
+} 
+@media screen and (max-width: 750px) {
+  body {
+  }
 }
