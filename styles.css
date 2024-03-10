@@ -1,16 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 
 :root {
-  --accent-color-6: rgb(88, 138, 161);
-  --accent-color-1: #d4722d;
-  --accent-color-3: #4354a3;
-  --accent-color-4: #aee4ec;
+  --accent-color-6: rgb(83, 148, 60);
+  --accent-color-1: #52975f;
+  --accent-color-3: #d1a25c;
+  --accent-color-4: #91c832;
   --accent-color-5: #e8d94f;
-  --accent-color-2: #d54c27;
+  --accent-color-2: #de6948;
 
   --currblock: 1;
   --light-back: rgb(247, 242, 216);
-  --heading-font: "Theano Didot", serif;
+  --heading-font: "Didot", serif;
   --body-font2: "Cormorant Garamond",serif;
   --body-font: "Swis721 Lt BT", sans-serif;
 }
@@ -34,7 +34,9 @@ body {
   /*overflow-x: hidden;*/
   background-color: var(--light-back);
   background-attachment: fixed;
-
+  
+background-position: to;
+  background-size: cover;
   padding: 0px;
   margin: 0px;
   height: 100%;
@@ -103,26 +105,23 @@ ul {
   padding-left: 0;
 }
 
-div#main-container div#credits{
-  position: absolute;
-  bottom: 20px;
-  font-size: 12px;
-  left: 50px;
-  width: 340px;
-  font-style: italic;
-}
+
 div#site-container {
   display: grid;
   grid-template-columns: 40% 60%;
   height: 100%;
   justify-items: center;
   align-items: center;
+ 
 }
 div#sidebar {
   height: max-content;
   margin-left: 8%;
   padding: 10px;
   text-align: right;
+  background-image: url("public/images/backgroundimg.jpg");
+  background-size: cover;
+  
   
 }
 
@@ -134,10 +133,12 @@ div#sidebar header {
   padding-left: 30px;
   justify-items: end;
   align-items: center;
-}
+  
+  }
 div#sidebar header section {
   height: max-content;
   padding-right: 10px;
+  
 }
 
 div#sidebar header img {
@@ -150,10 +151,10 @@ div#sidebar nav {
 
 div#sidebar nav ul {
   list-style: none;
-  font-size: large;
+  font-size: 20px;
 }
 div#sidebar nav ul li a {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 div#sidebar nav ul li.active {
   color: var(--accent-color-2);
@@ -215,8 +216,8 @@ div#main-container div#page-container div.page {
   align-items: center; /* Centers child vertically */
   height: 100vh;
   width: 55cqw;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
   
 }
 div#main-container div#page-container div.page p {
@@ -246,6 +247,9 @@ div#main-container
   div#education.page
   div.info-container
   img {
+    height: 130px;
+    width: min-content;
+    display: block;
 }
 div#main-container
   div#page-container
@@ -275,7 +279,7 @@ div#main-container div#page-container div#skills.page h5 {
   margin: 0;
 }
 div#main-container div#page-container div#skills.page ul.skills-ratings {
-  width: 500px;
+  width: inherit;
 }
 div#main-container div#page-container div#skills.page ul {
   padding: 0;
@@ -284,8 +288,9 @@ div#main-container div#page-container div#skills.page ul {
 }
 div#main-container div#page-container div#skills.page ul.skills-ratings li {
   height: 25px;
+  
   display: grid;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: 15% auto;
   justify-items: end;
   align-items: end;
   text-align: right;
@@ -296,8 +301,9 @@ div#main-container div#page-container div#skills.page ul.skills-ratings li p {
   text-align: right;
 }
 div#main-container div#page-container div#skills.page ul.skills-ratings li svg {
-  width: 100%;
+  
   height: 15px;
+  width: 100%;
   padding-left: 15px;
 }
 
@@ -318,35 +324,35 @@ div#main-container
   ul.skills-ratings
   li
   rect.scale {
-  width: 96%;
+  width: 100%;
   height: 10px;
   fill: transparent;
   stroke-width: 1;
   stroke: rgb(0, 0, 0);
 }
 div#main-container div#page-container div#skills.page ul li rect.score-10 {
-  width: 10%;
-}
-div#main-container div#page-container div#skills.page ul li rect.score-20 {
   width: 20%;
 }
+div#main-container div#page-container div#skills.page ul li rect.score-20 {
+  width: calc(inherit/10);
+}
 div#main-container div#page-container div#skills.page ul li rect.score-30 {
-  width: 30%;
+  width: calc(inherit/10);
 }
 div#main-container div#page-container div#skills.page ul li rect.score-40 {
-  width: 40%;
+  width: calc(inherit/10);
 }
 div#main-container div#page-container div#skills.page ul li rect.score-50 {
-  width: 50%;
+  width: calc(inherit/10);
 }
 div#main-container div#page-container div#skills.page ul li rect.score-60 {
-  width: 60%;
+   width: 60%;
 }
 div#main-container div#page-container div#skills.page ul li rect.score-70 {
   width: 70%;
 }
 div#main-container div#page-container div#skills.page ul li rect.score-80 {
-  width: 80%;
+   width: 80%;
 }
 div#main-container div#page-container div#skills.page ul li rect.score-90 {
   width: 90%;
@@ -456,13 +462,7 @@ ul#socials li:nth-child(3) a:before {
 ul#socials li:nth-child(4) a:before {
   background: #dd4b39;
 }
-video {
-  width: 350px;
-  height: 250px;
-  float: left;
-  padding: 0;
-  margin: 0;
-}
+
 /*work exp*/
 div#workexp {
   width: 100%;
@@ -558,23 +558,23 @@ p {
 }
 
 .wisteria {
-  color: #7aad44;
+  color: var(--accent-color-1);
 }
 
 .belize {
-  color: #d4722d;
+  color: var(--accent-color-2);
 }
 
 .pomegranate {
-  color: #187720;
+  color: var(--accent-color-3);
 }
 
 .green {
-  color: #707425;
+  color: var(--accent-color-4);
 }
 
 .midnight {
-  color: #d54c27;
+  color: var(--accent-color-5);
 }
 
 .highlight-0 {
@@ -642,8 +642,30 @@ div#main-container div#page-container div#projects div.card-container {
   overflow: hidden;
 }
 div#main-container div#page-container div#projects div.card-container .card {
-  width: fit-content;
+  width: auto;
   margin-right: 20px;
+  
+}
+
+div#main-container div#page-container div#projects div.card-container .card video:hover {
+  text-decoration: none;
+  
+}
+
+div#main-container div#page-container div#projects div.card-container .card video {
+  width: 90%;
+  padding: 10px;
+  border: black 1px solid;
+  height: fit-content;
+}
+
+div#main-container div#page-container div#awards .medium{
+  font-size: 19px;
+}
+
+div#main-container div#page-container div#awards p {
+  text-align: justify;
+  margin-bottom: 10px;
 }
 
 /**/
