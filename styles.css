@@ -155,6 +155,10 @@ div#sidebar nav ul {
 }
 div#sidebar nav ul li a {
   background-color: rgb(255, 255, 255);
+
+}
+div#sidebar nav ul li a:hover {
+  text-decoration: none;
 }
 div#sidebar nav ul li.active {
   color: var(--accent-color-2);
@@ -169,11 +173,11 @@ div#sidebar button {
   padding: 5px 30px;
   border-radius: 0;
   border: none;
-  background-color: transparent;
+  background-color: white;
 }
 div#sidebar button:hover {
-  border: black 1px solid;
-  padding: 4px 29px;
+  background-color: var(--accent-color-3);
+  color: white;
 }
 div#main-container {
   background-origin: padding-box;
@@ -267,6 +271,11 @@ div#main-container
   span {
   font-size: 20px;
 }
+div#main-container
+  div#page-container
+  div#education.page p {
+    margin: 10px 0;
+  }
 
 /*WORK EXPEIENECE*/
 div#main-container div#page-container div#workexp.page div span {
@@ -358,11 +367,15 @@ div#main-container div#page-container div#skills.page ul li rect.score-90 {
   width: 90%;
 }
 
-div#main-container div#page-container div#interest.page div.card-container {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto auto;
+div#main-container div#page-container div#interest.page div.container {
+  width: 50cqw;
 }
+
+
+div#main-container div#page-container div#interest.page .interest-block {
+
+}
+
 div#main-container
   div#page-container
   div#interest.page
@@ -644,19 +657,30 @@ div#main-container div#page-container div#projects div.card-container {
 div#main-container div#page-container div#projects div.card-container .card {
   width: auto;
   margin-right: 20px;
+  padding: 13px;
+  padding-left: 0;
   
 }
 
-div#main-container div#page-container div#projects div.card-container .card video:hover {
+div#main-container div#page-container div#projects div.card-container .card img:hover {
   text-decoration: none;
   
 }
 
-div#main-container div#page-container div#projects div.card-container .card video {
+div#main-container div#page-container div#projects div.card-container .card img {
   width: 90%;
   padding: 10px;
   border: black 1px solid;
   height: fit-content;
+}
+
+div#main-container div#page-container div#projects div.card-container .card p {
+  margin: 15px 0;
+
+}
+
+div#main-container div#page-container div#projects div.card-container a {
+  font-size: 20px;
 }
 
 div#main-container div#page-container div#awards .medium{
@@ -778,7 +802,7 @@ div#main-container div#page-container div#awards p {
   }
 }
 div#main-container div#page-container div#interest.page .scroller {
-  max-width: 750px;
+  width: 100%;
 }
 
 div#main-container div#page-container div#interest.page .scroller__inner {
@@ -922,10 +946,13 @@ div#main-container div#page-container div#interest.page .test {
   grid-template-columns: 100%;
   }
 
+  
+
   div#sidebar {
     display: grid;
     grid-template-columns: 100%;
     justify-content: center;
+    background-image: none;
     
     margin-left: 0px;
   }
