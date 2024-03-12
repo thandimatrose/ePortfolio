@@ -296,7 +296,7 @@ div#main-container div#page-container div#skills.page h5 {
   margin: 0;
 }
 div#main-container div#page-container div#skills.page ul.skills-ratings {
-  width: fit-content;
+  width: auto;
 }
 div#main-container div#page-container div#skills.page ul {
   padding: 0;
