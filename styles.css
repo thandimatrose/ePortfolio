@@ -1003,7 +1003,7 @@ div#main-container div#page-container div#interest.page .test {
   }
 
   div#sidebar address a {
-    justify-self: start;
+    justify-self: center;
       
   }
   div#sidebar address  a button {
@@ -1094,8 +1094,16 @@ div#sidebar address {
     justify-items: center;
     align-items: center;
   }
-  div#sidebar img {
-    visibility:hidden;
+  div#sidebar header {
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  div#sidebar header img {
+    display: none;
   }
   div#sidebar address {
     width: 100%;
