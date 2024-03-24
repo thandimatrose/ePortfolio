@@ -664,7 +664,7 @@ div#main-container div#page-container div#projects.page {
 div#main-container div#page-container div#projects div.card-container {
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 50% 50%;
   overflow: hidden;
 }
 div#main-container div#page-container div#projects div.card-container .card {
