@@ -691,7 +691,9 @@ div#main-container div#page-container div#projects div.card-container .card p {
   margin: 15px 0;
 
 }
-
+div#main-container div#page-container div#awards {
+  margin-bottom: 650px;
+}
 div#main-container div#page-container div#projects div.card-container a {
   font-size: 20px;
 }
