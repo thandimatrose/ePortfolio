@@ -305,22 +305,19 @@ div#main-container div#page-container div#skills.page ul {
 }
 div#main-container div#page-container div#skills.page ul.skills-ratings li {
   height: 25px;
-  
+  list-style: disc;
   display: grid;
-  grid-template-columns: 40% 60%;
-  justify-items: end;
-  align-items: end;
-  text-align: right;
+  justify-items: start;
+  align-items: start;
+  text-align: left;
 }
 
 div#main-container div#page-container div#skills.page ul.skills-ratings li p {
   padding-right: 10px;
-  text-align: right;
+  text-align: left;
 }
 div#main-container div#page-container div#skills.page ul.skills-ratings li svg {
   
-  height: 20px;
-  padding-left: 15px;
 }
 
 div#main-container div#page-container div#skills.page ul.skills-ratings li {
